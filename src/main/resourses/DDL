@@ -1,0 +1,16 @@
+-- auto-generated definition
+create table users
+(
+    users_id      bigserial
+        constraint users_pk
+            primary key,
+    username      varchar not null,
+    user_login    varchar not null
+        constraint users_login_pk
+            unique,
+    user_password varchar not null
+);
+
+alter table users
+    owner to postgres;
+
